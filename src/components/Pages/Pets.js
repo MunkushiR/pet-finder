@@ -5,7 +5,7 @@ function Pets() {
 
     useEffect(() => {
         const fetchPets = async () => {
-          const response = await fetch('https://pet-finder-backend.onrender.com/pets');
+          const response = await fetch('https://pets-final.onrender.com/pets');
           const data = await response.json();
           setPetsData(data.data);
         };
@@ -15,7 +15,7 @@ function Pets() {
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://pet-finder-backend.com/pets/destroy/${id}`, {
+      await fetch(`https://pets-final.onrender.com/pets/destroy/${id}`, {
         method: 'DELETE',
       });
       const newData = petsData.filter((pet) => pet.id !== id);

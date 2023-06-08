@@ -15,7 +15,7 @@ function AddPetForm() {
 
   useEffect(() => {
     const fetchPets = async () => {
-      const response = await fetch('https://pet-finder-backend.onrender.com/pets');
+      const response = await fetch('https://pets-final.onrender.com/pets');
       const data = await response.json();
       setPetsData(data.data);
     };
@@ -35,8 +35,8 @@ function AddPetForm() {
     };
 
     const url = editing
-      ? `https://pet-finder-backend.onrender.com/pets/update/${editingPet.id}`
-      : 'https://pet-finder-backend.onrender.com/pets/create';
+      ? `https://pets-final.onrender.com/pets/update/${editingPet.id}`
+      : 'https://pets-final.onrender.com/pets/create';
     const method = editing ? 'PUT' : 'POST';
     const response = await fetch(url, {
       method,
@@ -73,7 +73,7 @@ function AddPetForm() {
   };
 
   const handleDelete = async (id) => {
-    const response = await fetch(`https://pet-finder-backend.onrender.com/pets/destroy/${id}`, {
+    const response = await fetch(`https://pets-final.onrender.com/pets/destroy/${id}`, {
       method: 'DELETE',
     });
     if (response.ok) {

@@ -28,7 +28,7 @@ const Navbar = () => {
       <div class="container-fluid">
         <ul class="navbar-nav me-auto mb-2 fs-5">
         <li className="logo nav-header link-dark">
-              <Link to="/">Pet-finder-Backend</Link>
+              <Link to="/">Petfinder</Link>
             </li>
             
           <li class="nav-item ms-3 fs-5 link-dark">

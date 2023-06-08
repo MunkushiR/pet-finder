@@ -7,7 +7,7 @@ function LoginForm({ onLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('https://pet-finder-backend.com/pets/auth/login', {
+    const response = await fetch('https://pets-final.onrender.com/pets/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
