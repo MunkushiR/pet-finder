@@ -18,7 +18,7 @@ function Pets() {
 
   useEffect(() => {
     const fetchPets = async () => {
-      const response = await fetch('https://pets-final.onrender.com/pets');
+      const response = await fetch('http://localhost:4567/pets');
       const data = await response.json();
       setPetsData(data.data);
     };
@@ -38,8 +38,8 @@ function Pets() {
     };
 
     const url = editing
-      ? `https://pets-final.onrender.com/pets/update/${editingPet.id}`
-      : 'https://pets-final.onrender.com/pets/create';
+      ? `http://localhost:4567/pets/update/${editingPet.id}`
+      : 'http://localhost:4567/pets/create';
     const method = editing ? 'PUT' : 'POST';
     const response = await fetch(url, {
       method,
@@ -76,7 +76,7 @@ function Pets() {
   };
 
   const handleDelete = async (id) => {
-    const response = await fetch(`https://pets-final.onrender.com/pets/destroy/${id}`, {
+    const response = await fetch(`http://localhost:4567/pets/destroy/${id}`, {
       method: 'DELETE',
     });
     if (response.ok) {
