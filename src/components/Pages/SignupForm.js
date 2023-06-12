@@ -8,7 +8,7 @@ function SignupForm({ onSignup }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('http://localhost:4567/users/auth', {
+    const response = await fetch('http://localhost:9292/users/auth', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

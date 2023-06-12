@@ -14,7 +14,7 @@ function SearchForm() {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
   
-    fetch(`http://localhost:4567/pets=${query}`)
+    fetch(`http://localhost:9292/pets=${query}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) {

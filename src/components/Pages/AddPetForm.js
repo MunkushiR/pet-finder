@@ -15,7 +15,7 @@ function AddPetForm() {
 
   useEffect(() => {
     const fetchPets = async () => {
-      const response = await fetch('http://localhost:4567/pets');
+      const response = await fetch('http://localhost:9292/pets');
       const data = await response.json();
       setPetsData(data.data);
     };
@@ -73,7 +73,7 @@ function AddPetForm() {
   };
 
   const handleDelete = async (id) => {
-    const response = await fetch(`http://localhost:4567/pets/destroy/${id}`, {
+    const response = await fetch(`http://localhost:9292/pets/destroy/${id}`, {
       method: 'DELETE',
     });
     if (response.ok) {
